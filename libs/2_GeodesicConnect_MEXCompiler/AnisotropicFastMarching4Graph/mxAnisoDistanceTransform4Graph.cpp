@@ -85,13 +85,11 @@ void mexFunction (int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	TL      = mxGetPr (prhs[5]);
 	
 
-	const int* dimV_ = mxGetDimensions (prhs[2]);
-	//const mwSize *dimV_ = mxGetDimensions (prhs[2]); //Uncomment this line for MATLAB later than R2016 (Comment line 88) 
+	const mwSize *dimV_ = mxGetDimensions (prhs[2]); // MATLAB later than R2016
 	
 	const int dimN = mxGetNumberOfDimensions (prhs[2]);
 	
-	const int* dimT = mxGetDimensions (prhs[1]);
-	//const  mwSize *dimT = mxGetDimensions (prhs[1]); //Uncomment this line for MATLAB later than R2016 (Comment line 93) 
+	const mwSize *dimT = mxGetDimensions (prhs[1]); // MATLAB later than R2016
 
 	int dimV[3]; float volDim[3];
 	if (dimN == 3)
@@ -120,8 +118,7 @@ void mexFunction (int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
 	int dimScalar[1];
 	dimScalar[0] = 1;
 
-	plhs[0] = mxCreateNumericArray(3, dimV, mxDOUBLE_CLASS, mxREAL);
-	//plhs[0] = mxCreateNumericArray(3, dimV_, mxDOUBLE_CLASS, mxREAL); //Uncomment this line for MATLAB later than R2016 (Comment line 123)
+	plhs[0] = mxCreateNumericArray(3, dimV_, mxDOUBLE_CLASS, mxREAL); // MATLAB later than R2016
 	
 	OI = mxGetPr(plhs[0]);
 

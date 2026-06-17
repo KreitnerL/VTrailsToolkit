@@ -1,0 +1,14 @@
+# Compiled MEX binaries (Linux, Windows, macOS)
+*.mexa64
+*.mexw64
+*.mexmaci64
+*.mex
+
+# MATLAB Coder generated code
+codegen/
+
+# Auto-generated installation artefacts
+VTrails_Install_ErrorLog.mat
+
+# Auto-generated local path configuration (set by INSTALL_VTrails.m)
+main/VTRootDir.m
